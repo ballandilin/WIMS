@@ -16,6 +16,7 @@ body {
   text-align: center;
   opacity: 60%;
   top: 0px;
+  margin: 0;
 }
 
 
@@ -27,23 +28,25 @@ body {
   margin-left: 10em;
   margin-right: 10em;
   padding: 2rem;
-  width: auto;
+  padding-right: 10rem;
+  /* width: 50%; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 
-.cadre {
+#click {
   position: relative;
   border: 6px double #04dbd4;
   border-radius: 1rem;
-  padding: 5%;
+  /* padding: 5%; */
 }
 
 #imgLoad {
   width: 100%;
   height: 100%;
-  object-fit:scale-down;
+  object-fit: scale-down;
 }
 
 
@@ -58,18 +61,30 @@ body {
   border: none;
 }
 
-.cross:hover{
+/* #imgLoad:hover{
   -webkit-animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
           animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-}
+} */
 
 
 
 
 .container {
-  display: flex;
-  position: relative;
+  margin: 0 auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: 0fr 1.5fr 0fr ;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+  ". one ."
+  "three three three";
 }
+
+.item { grid-area: one; }
+.car { grid-area: three; }
+
+
 
 
 body > #c {
@@ -80,22 +95,43 @@ body > #c {
   margin-left: 25rem;
 }
 
+/* .car {
+  flex: 1;
+  border-radius: 2rem;
+  margin-top: 3em;
+  margin-left: 10em;
+  margin-right: 10em;
+  padding: 2rem;
+  padding-right: 10rem;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr
+} */
 
-ul li{
-  width: 25%;
+
+ul > li {
+  width: auto;
+  margin: 0 auto;
   list-style-type: none;
   position: absolute;
   padding: 2%;
   height: 20%;
   opacity: 0;
   padding-top: 1.5rem;
+  margin-left: auto;
   text-align: center;
   transition: 1s opacity;
 }
 
 /* #cli {
+  padding: 2%;
+  height: 20%;
+  position: absolute;
   margin-left: 5rem;
   margin-right: 2rem;
+  transition: 1s opacity;
+  list-style-type: none;
+  opacity: 0;
 } */
 
 .active {
@@ -121,13 +157,24 @@ strong {
   height: 10rem;
 }
 
+.tips {
+  margin: 0;
+}
 
-.tips #t
+.tips h3 {
+  position: relative;
+  text-align: left;
+}
+
+.tips li
 {
+  text-align: left;
   list-style-type:circle;
   position: relative;
   width: auto;
   color: black;
+  opacity: 1;
+  margin : 0;
 }
 
 
