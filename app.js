@@ -1,18 +1,38 @@
 var createError = require('http-errors');
 var express = require('express');
+var session = require('express-session');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const bodyParser = require('body-parser');
+
+
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var pythonRouter = require('./routes/pythonData');
 
 var app = express();
+var server = require('http').Server(app);
+
+var io = require('socket.io')(server);
+
+app.use(function(req, res, next){
+	res.io = io;
+	next();
+});
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
+// app.use(bodyParser.json());      
+// app.use(bodyParser.urlencoded({extended: true})); 
+
+app.use(bodyParser.json({limit: '100mb'}));
+app.use(bodyParser.urlencoded({limit: '100mb', extended: true}));
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -41,4 +61,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+module.exports = {app:app, server:server};

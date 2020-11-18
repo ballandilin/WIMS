@@ -1,3 +1,9 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 body {
   background-image: url("../images/back.png");
   background-repeat: no-repeat;
@@ -12,48 +18,91 @@ body {
 .title {
   background-color: #04dbd4;
   width: auto;
-  height: 4rem;
+  height: 4vw;
   text-align: center;
   opacity: 60%;
   top: 0px;
   margin: 0;
+  font-size: 1.5vw
 }
 
 
 .item {
-  flex: 1;
+  /*flex: 1;*/
   border: 7px solid #04dbd4;
-  border-radius: 2rem;
-  margin-top: 3em;
-  margin-left: 10em;
-  margin-right: 10em;
-  padding: 2rem;
-  padding-right: 10rem;
+  border-radius: 2vw;
+  margin-top: 3vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding: 2vw;
+  padding-right: 10vw;
   /* width: 50%; */
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 20vw 20vw 20vw;
+    grid-template-areas:
+  "one two three";
 }
+
 
 
 #click {
   position: relative;
+   grid-area: one;
   border: 6px double #04dbd4;
   border-radius: 1rem;
+  height: 20vw;
+  overflow: hidden;
   /* padding: 5%; */
 }
 
 #imgLoad {
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: scale-down;
+  object-fit: cover;
+}
+
+
+
+#python {
+  grid-area: two;
+  border: 1px solid black;
+  margin: auto auto;
+  height: 40px;
+  width: 10vw;
+  text-align: center;
+}
+
+.tips {
+  grid-area: three;
+  /*position: relative;*/
+  margin: auto 0;
+}
+
+.tips h3 {
+  position: relative;
+  text-align: left;
+  font-size: 1.3vw; 
+}
+
+.tips li
+{
+  text-align: left;
+  list-style-type:circle;
+  position: relative;
+  font-size: 0.9vw;
+  width: auto;
+  color: black;
+  opacity: 1;
+  margin : auto 0;
 }
 
 
 
 .cross {
-  margin: 0;
+  margin: auto 0;
   position: relative;
+  align-content: center;
   top: 50%;
   left: 25%;
   font-size: 10rem;
@@ -70,11 +119,13 @@ body {
 
 
 .container {
-  margin: 0 auto;
+  position: relative;
+  margin: auto 0;
   width: auto;
+  height: 10vh;
   display: grid;
-  grid-template-columns: 0fr 1.5fr 0fr ;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 0vw 100vw 0vw ;
+  grid-template-rows: 30vw 20vw;
   gap: 0px 0px;
   grid-template-areas:
   ". one ."
@@ -93,31 +144,43 @@ body > #c {
   margin-left: 2rem;
   width: 50%;
   margin-left: 25rem;
+  height: 10vh;
 }
 
-/* .car {
+ .car {
   flex: 1;
-  border-radius: 2rem;
+  /*border-radius: 2rem;*/
+/*  margin: auto 0;
   margin-top: 3em;
   margin-left: 10em;
   margin-right: 10em;
   padding: 2rem;
-  padding-right: 10rem;
-  width: 50%;
-  display: grid;
-  grid-template-columns: 1fr 1fr
-} */
+  padding-right: 10rem;*/
+  width: 20vw;
+  height: 2vw;
+/*  display: grid;
+  grid-template-columns: 1fr 1fr*/
+} 
+
+
+
+
+
+/*.car {
+  position: absolute;
+  height: 2vw;
+}*/
 
 
 ul > li {
   width: auto;
-  margin: 0 auto;
+  margin: auto 0;
   list-style-type: none;
   position: absolute;
   padding: 2%;
-  height: 20%;
+  height: 2vw;
   opacity: 0;
-  padding-top: 1.5rem;
+  padding: auto 0;
   margin-left: auto;
   text-align: center;
   transition: 1s opacity;
@@ -140,10 +203,10 @@ ul > li {
 
 p {
   font-family: sans-serif;
-  font-size: 13px;
+  font-size: 0.5vw;
   color: #646566;
   /* color: #OOOOOO; */
-  line-height: 1.5em;
+  /*line-height: 1.5em;*/
 }
 
 strong {
@@ -154,28 +217,11 @@ strong {
 }
 
 #cli img {
-  height: 10rem;
+  /*height: auto;*/
+  /*width: auto;*/
+  height: 7vw;
 }
 
-.tips {
-  margin: 0;
-}
-
-.tips h3 {
-  position: relative;
-  text-align: left;
-}
-
-.tips li
-{
-  text-align: left;
-  list-style-type:circle;
-  position: relative;
-  width: auto;
-  color: black;
-  opacity: 1;
-  margin : 0;
-}
 
 
 
