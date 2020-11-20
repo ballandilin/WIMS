@@ -9,13 +9,17 @@ block content
   a#popup(href="#popup1")
 
 
+
   // ajout d'image, tips, autres
   .container
     .item
       #click.cadre
-        img#imgLoad(src='../images/add.png' alt='')
+        div#cross
+          | +
+        img#imgLoad(src='' alt='')
         input#imgupload(type='file' name='file' style='display:none')
-      div#python BEGIN
+
+      button#python Click Me!
 
       div
       .tips
@@ -28,56 +32,18 @@ block content
           li Don&apos;t tilt your head up/down or left/right
 
 
+
+
     div.car
+      - var names = ["anne_hathaway", 'dwayne johnson', 'jerry seinfeld', "madonna", 'sofia vergara', "arnold_schwarzenegger", 'eddie Hall', "kate_beckinsale", 'mindy kaling', 'Travis Fimmel', 'ben afflek', 'elton john' , 'keanu reeves' ,"ragnar", "trump", 'brian Shaw', 'hafthor julius bjornsson', 'lauren cohan', 'simon pegg', "will_smith"];
       ul#c
-        li#cli
-          p
-            img(src='../images/GEGE.jpg' alt='')
-          p Gerard DEPARDIEU
-        li#cli
-          p
-            img(src='../images/jcvd.jpg' alt='')
-          p Gerard DEPARDIEU
-        li#cli
-          p
-            img(src='../images/machete.jpeg' alt='')
-          p Gerard DEPARDIEU
-        li#cli
-          p
-            img(src='../images/elton.jpg' alt='')
-          p Gerard DEPARDIEU
-        li#cli
-          p
-            img(src='../images/GEGE.jpg' alt='')
-          p Gerard DEPARDIEU
-        li#cli
-          p
-            img(src='../images/GEGE.jpg' alt='')
-          p Gerard DEPARDIEU
-        li#cli
-          p
-            img(src='../images/GEGE.jpg' alt='')
-          p Gerard DEPARDIEU
-        li#cli
-          p
-            img(src='../images/GEGE.jpg' alt='')
-          p Gerard DEPARDIEU
-        li#cli
-          p
-            img(src='../images/GEGE.jpg' alt='')
-          p Gerard DEPARDIEU
-        li#cli
-          p
-            img(src='../images/GEGE.jpg' alt='')
-          p Gerard DEPARDIEU
-        li#cli
-          p
-            img(src='../images/GEGE.jpg' alt='')
-          p Gerard DEPARDIEU
-        li#cli
-          p
-            img(src='../images/GEGE.jpg' alt='')
-          p Gerard DEPARDIEU
+        each val in names
+          li#cli
+            - var img = '../images/celeb/' + val + '/0.jpg'
+            p
+              img(src= img alt='')
+            p= val
+        
 
   #popup1.overlay
       .popup
@@ -88,48 +54,10 @@ block content
 
           img#imgLoad(src='../images/add.png' alt='')
 
-          //- form.form-example(action='' method='get')
-
-          //-   //- date
-          //-   .form-example
-          //-     label(for='date') Date de réservation : 
-          //-     input#date(type='date' name='date' required='')
-
-          //-   //- forfait
-
-          //-   .form-example
-          //-     label(for='forfait') Choisir un forfait : 
-          //-     input#name(type='text' name='forfait' required='')
-
-          //-   //- nombre de joueur
-
-          //-   .form-example
-          //-     label(for='nbJoueur') Nombre de participants : 
-          //-     input#name(type='number' name='nbJoueur' value="1" required='' min="1" max="8")
-
-          //-   //- nom prenom
-
-          //-   .form-example
-          //-     label(for='prenom') Prénom : 
-          //-     input#name(type='text' name='prenom' required='')
-          //-     label(for='nom') Nom:
-          //-     input#name(type='text' name='nom' required='')
-
-          //-   //- email et telephone  
-
-          //-   .form-example
-          //-     label(for='email') Email : 
-          //-     input#email(type='email' name='email' required='')
-          //-     label(for='telephone') Téléphone : 
-          //-     input#email(type='tel' name='telephone' required='')
-
-          //-   //- sub
-
-          //-   .form-example
-          //-     input(id="sub" type='submit' value='Réserver')
 
   script(src="../javascripts/lzma.js")
   script(language="javascript" src="../javascripts/lz-string.js")
+  script(language="javascript" src="../javascripts/NNBack.js")
   script(src='../javascripts/main.js' type='text/javascript')
   script(src='../javascripts/python.js' type='text/javascript')
   script(src='../javascripts/loadImg.js' type='text/javascript')

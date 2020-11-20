@@ -36,6 +36,7 @@ class App():
 
 		self._load()
 
+		print("Loading...")
 
 		if self.distances['people']:
 			self.get_saved_data()

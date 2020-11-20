@@ -25,10 +25,6 @@ $('document').ready(function () {
         // });
 
 
-
-
-
-        $('.popup img').first().attr('src', img);
         $('#imgLoad').attr('src', img);
         }
         // imageToDataUri(img, 300, 300);
