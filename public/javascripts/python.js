@@ -8,6 +8,7 @@ $('document').ready(function () {
     if (img === '' ) {
       alert("Une image est necessaire");
     } else {
+      $("#python").text("waiting...");
       $.ajax({
           type: "POST",
           url: "/pythonData/",
@@ -16,20 +17,22 @@ $('document').ready(function () {
           data: JSON.stringify(data),
           success: function(r) {
             console.log(r);
+          },
+          statusCode: {
+            500: function() {
+              alert("Une erreur est survenue dans le processus");
+              $("#python").text("Find !");
+            }
           }
       });
     }
-    // $.post("/pythonData/",{img:img},function(data){
 
-    //   console.log("done");
-    //   document.location.href = "/";
-    // });
   });
 
   soc.on('result', function(result) {
     // $("#result").text(result);
     $("#popup1 h2").first().text(result);
-
+    $("#python").text("Find !");
     $('.popup img').first().attr('src',"/compare/img/imgSet/" + result + "/0.jpg");
     // $("#popup").click();
     window.location.href = "#popup1";

@@ -13,7 +13,7 @@ canvas {
 
 body {
   /* background-image: url("../images/back.png"); */
-  background-color: rgb(26, 25, 25);
+  background-color: rgb(158, 147, 147);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -42,6 +42,7 @@ body {
 #python {
   grid-area: two;
   border: 1px solid black;
+  border-radius: 10%;
   margin: auto auto;
   height: 40px;
   width: 10vw;
@@ -107,7 +108,7 @@ body {
   align-items: center;
   /* padding-right: 10vw; */
   background-color:dimgrey;
-  box-shadow: 2px 2px 1px 1px  #0db623;
+  /* box-shadow: 2px 2px 1px 1px  #0db623; */
   opacity: .9;
   /* width: 50%; */
   display: grid;
