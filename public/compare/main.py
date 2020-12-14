@@ -339,7 +339,10 @@ if __name__ == "__main__":
 	# img2 = "\\img\\imgComp\\3.jpg"
 	# start_time = time.time()
 
-	img2 = sys.argv[1][23::]
+	# img2 = sys.argv[1][23::]
+	# img2 = sys.stdin[1][23::]
+	for lines in sys.stdin:
+		img2 = lines[23::]
 
 	str.encode(img2)
 

@@ -1,6 +1,7 @@
 extends layout
 
 block content
+
   link(rel='stylesheet', href='/stylesheets/popup.css')
   // bandeau de titre
   .title
@@ -51,8 +52,7 @@ block content
         h2.result 
         a.close(href='#') &times;
         .content
-
-          img#imgLoad(src='../images/add.png' alt='')
+          img#imgLoad(src='' alt='')
 
 
   script(src="../javascripts/lzma.js")

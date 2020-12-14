@@ -29,9 +29,9 @@
     position: relative;
     transition: all 1s ease-in-out;
     /* background-image: ; */
-    opacity: .7;
-    -webkit-box-shadow: 10px 5px 15px 5px #15C2ED; 
-    box-shadow: 10px 5px 15px 5px #15C2ED;
+    opacity: .8;
+    /* -webkit-box-shadow: 10px 5px 15px 5px #15C2ED; 
+    box-shadow: 10px 5px 15px 5px #15C2ED; */
   }
   
 .popup h2 {
