@@ -31,6 +31,7 @@ $('document').ready(function () {
 
   soc.on('result', function(result) {
     // $("#result").text(result);
+    console.log(result);
     $("#popup1 h2").first().text(result);
     $("#python").text("Find !");
     $('.popup img').first().attr('src',"/compare/img/imgSet/" + result + "/0.jpg");

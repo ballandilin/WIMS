@@ -25,7 +25,9 @@ class App():
 		self.img1 = img1
 		self.img2 = img2
 
+
 		self.vec2 = self.getVectorImg(self.img2)
+		# print(len(self.vec2))
 
 		self.people = []
 		self.threads = []
@@ -36,8 +38,6 @@ class App():
 
 		self._load()
 
-		print("Loading...")
-
 		if self.distances['people']:
 			self.get_saved_data()
 		else:
@@ -47,6 +47,9 @@ class App():
 		print(self.get_comp_name(self.distancesList))
 
 
+
+	def progress(self, ):
+		return prog
 
 
 
@@ -270,12 +273,12 @@ class App():
 
 ########   tentative d'optimisation   ##########
 
-		# if max(np.array(f).shape) > 1600:
-		# 	pil_img = PIL.Image.fromarray(f)
-		# 	pil_img.thumbnail((1600, 1600), PIL.Image.LANCZOS)
-		# 	f = np.array(pil_img)
+		if max(np.array(img).shape) > 1600:
+			pil_img = PIL.Image.fromarray(img)
+			pil_img.thumbnail((1600, 1600), PIL.Image.LANCZOS)
+			img = np.array(pil_img)
 
-		# img = f.convert('RGB')
+			# img = f.convert('RGB')
 
 ############################################
 
@@ -349,7 +352,7 @@ if __name__ == "__main__":
 	im = PIL.Image.open(BytesIO(base64.b64decode(img2)))
 	im.save('./public/compare/out.jpg', 'JPEG')
 
-	time.sleep(1)
+	# time.sleep(1)
 
 	app = App(img1, "public\\compare\\out.jpg")
 	# print("--- %s seconds ---" % (time.time() - start_time))
