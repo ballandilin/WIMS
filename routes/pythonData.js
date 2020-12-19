@@ -50,7 +50,6 @@ function py(img, res) {
   var results = [];
 
   myscript.on('message', function(message) {
-    res.io.emit("progress", message);
     results.push(message);
   });
 
