@@ -66,12 +66,14 @@ body {
 
 #python {
   grid-area: two;
-  border: 1px solid black;
   margin: auto auto;
   height: 40px;
   width: 10vw;
   text-align: center;
 }
+
+
+#poy
 
 .tips {
   grid-area: three;

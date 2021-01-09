@@ -27,7 +27,6 @@ class App():
 
 
 		self.vec2 = self.getVectorImg(self.img2)
-		# print(len(self.vec2))
 
 		self.people = []
 		self.threads = []
@@ -48,8 +47,13 @@ class App():
 
 
 
-	def progress(self, ):
+	def progress(self):
 		return prog
+
+	def isThereFace(self):
+		pass
+
+
 
 
 
@@ -273,9 +277,9 @@ class App():
 
 ########   tentative d'optimisation   ##########
 
-		if max(np.array(img).shape) > 1600:
+		if max(np.array(img).shape) > 1000:
 			pil_img = PIL.Image.fromarray(img)
-			pil_img.thumbnail((1600, 1600), PIL.Image.LANCZOS)
+			pil_img.thumbnail((1000, 1000), PIL.Image.LANCZOS)
 			img = np.array(pil_img)
 
 			# img = f.convert('RGB')
@@ -337,10 +341,11 @@ class App():
 
 
 if __name__ == "__main__":
+	
 
 	img1 = "./public/compare/img/imgSet/"
 	# img2 = "\\img\\imgComp\\3.jpg"
-	# start_time = time.time()
+	start_time = time.time()
 
 	# img2 = sys.argv[1][23::]
 	# img2 = sys.stdin[1][23::]
@@ -355,4 +360,4 @@ if __name__ == "__main__":
 	# time.sleep(1)
 
 	app = App(img1, "public\\compare\\out.jpg")
-	# print("--- %s seconds ---" % (time.time() - start_time))
+	print(time.time() - start_time)

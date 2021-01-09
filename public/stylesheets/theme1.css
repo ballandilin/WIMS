@@ -13,7 +13,7 @@ canvas {
 
 body {
   /* background-image: url("../images/back.png"); */
-  background-color: rgb(158, 147, 147);
+  background-color: #242729;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -41,17 +41,22 @@ body {
 
 #python {
   grid-area: two;
-  border: 1px solid black;
+  border: 1px solid #d4d3d0;
   border-radius: 10%;
   margin: auto auto;
-  height: 40px;
-  width: 10vw;
+  height: 2vw;
+  width: 6vw;
   text-align: center;
+  cursor:pointer;
 }
 
-#python:after {
+#python::after {
   animation: pulsing 1s;
 }
+
+/* #btImage {
+  background-image: url("../images/bouclier.png");
+} */
 
 @keyframes pulsing {
   0% {
@@ -99,7 +104,7 @@ body {
 
 .item {
   /*flex: 1;*/
-  border: 4px solid  rgb(26, 25, 25);
+  border: 4px solid  #a4a4a4;
   border-radius: 2vw;
   margin-top: 3vw;
   margin-left: 10vw;
@@ -107,7 +112,7 @@ body {
   padding: 2vw;
   align-items: center;
   /* padding-right: 10vw; */
-  background-color:dimgrey;
+  background-color:#4b5154;
   /* box-shadow: 2px 2px 1px 1px  #0db623; */
   opacity: .9;
   /* width: 50%; */
@@ -122,7 +127,7 @@ body {
 #click {
   position: relative;
    grid-area: one;
-  border: 6px double  rgb(26, 25, 25);
+  border: 6px double  #a4a4a4;
   border-radius: 1rem;
   height: 20vw;
   overflow: hidden;
@@ -141,7 +146,7 @@ body {
 
 .tips {
   grid-area: three;
-  /*position: relative;*/
+  color: #d4d3d0;
   margin: auto 0;
 }
 
@@ -158,7 +163,7 @@ body {
   position: relative;
   font-size: 0.9vw;
   width: auto;
-  color: black;
+  color: #d4d3d0;
   opacity: 1;
   margin : auto 0;
 }

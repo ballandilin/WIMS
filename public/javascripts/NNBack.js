@@ -1,3 +1,6 @@
+// export { Particle as particle };
+
+
 function Particle(o) {
 
     this.C = document.createElement('canvas');
@@ -8,8 +11,8 @@ function Particle(o) {
     this.o = {
         w: (o.w !== undefined) ? o.w : window.innerWidth,
         h: (o.h !== undefined) ? o.h : window.innerHeight,
-        c: (o.c !== undefined) ? o.c : '#ffffff',
-        b: (o.b !== undefined) ? o.b : '#ffffff',
+        c: (o.c !== undefined) ? o.c : '#242729',
+        b: (o.b !== undefined) ? o.b : '#242729',
         i: (o.i !== undefined) ? o.i : true,
         s: (o.s !== undefined) ? o.s : 0.5,
         d: (o.d !== undefined) ? o.d : 10000
@@ -25,7 +28,7 @@ function Particle(o) {
 
 Particle.prototype._i = function () {
     if ((/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i).test(this.o.b)) {
-        this.C.parentElement.style.background = this.o.b;
+        this.C.parentElement.style.background = "#242729";
     }
 
     this.$ = this.C.getContext('2d');
@@ -142,3 +145,4 @@ new Particle({
     s: 0.7,
     d: 4500
 });
+

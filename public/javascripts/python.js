@@ -2,6 +2,14 @@ $('document').ready(function () {
 
     var soc = io();
 
+  // $('#python').mouseover(function(){
+  //   this.setAttribute('src', '../images/bouclierSombre2.png');
+  // });
+
+  // $('#python').mouseleave(function(){
+  //   this.setAttribute('src', '../images/bouclier2.png');
+  // });
+
   $('#python').click(function(){
     var img = $('#imgLoad').attr('src');
     var data = { img : img };
