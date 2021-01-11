@@ -1,6 +1,3 @@
-// export { Particle as particle };
-
-
 function Particle(o) {
 
     this.C = document.createElement('canvas');
@@ -136,13 +133,13 @@ P.prototype._d = function () {
     this.$.fill();
 };
 
-new Particle({
-    w: window.innerWidth,
-    h: window.innerHeight,
-    c: '#1ac748',
-    b: '#303030',
-    i: true,
-    s: 0.7,
-    d: 4500
-});
+// new Particle({
+//     w: window.innerWidth,
+//     h: window.innerHeight,
+//     c: '#1ac748',
+//     b: '#303030',
+//     i: true,
+//     s: 0.7,
+//     d: 4500
+// });
 

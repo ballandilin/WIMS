@@ -5,18 +5,20 @@ body, html {
 }
 
 body {
-  background-image: url("../images/back.png");
+  background-image: url("../images/fond-medievalFS.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  height: 100%;
 }
 
 
 
 
+
 .title {
-  background-color: #04dbd4;
+  background-color: #AF4D00;
   width: auto;
   height: 4vw;
   text-align: center;
@@ -29,7 +31,7 @@ body {
 
 .item {
   /*flex: 1;*/
-  border: 7px solid #04dbd4;
+  border: 7px solid #AF4D00;
   border-radius: 2vw;
   margin-top: 3vw;
   margin-left: 10vw;
@@ -38,7 +40,7 @@ body {
   padding-right: 10vw;
   /* width: 50%; */
   display: grid;
-  grid-template-columns: 20vw 20vw 20vw;
+  grid-template-columns: 20vw 30vw 20vw;
     grid-template-areas:
   "one two three";
 }
@@ -48,7 +50,7 @@ body {
 #click {
   position: relative;
    grid-area: one;
-  border: 6px double #04dbd4;
+  border: 6px double #AF4D00;
   border-radius: 1rem;
   height: 20vw;
   overflow: hidden;
@@ -66,11 +68,45 @@ body {
 
 #python {
   grid-area: two;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: auto auto;
   height: 40px;
   width: 10vw;
   text-align: center;
+}
+
+#theme {
+  display: inline;
+  /* margin-top: .2vw;
+  margin-bottom: -1vw; */
+}
+
+#theme1 {
+  background-color: grey;
+  margin-left: .5vw;
+  height: .5vw;
+  width: .5vw;
+  cursor:pointer;
+}
+
+#theme2 {
+  background-color: turquoise;
+  margin-left: .5vw;
+  height: .5vw;
+  width: .5vw;
+  cursor:pointer;
+}
+
+#theme3 {
+  background-color: burlywood;
+  margin-left: .5vw;
+  height: .5vw;
+  width: .5vw;
+  cursor:pointer;
+}
+
+#python {
+  background-image: url("../images/bouclier.png");
 }
 
 .tips {
