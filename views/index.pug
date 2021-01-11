@@ -3,22 +3,12 @@ extends layout
 block content
 
   link(rel='stylesheet', href='/stylesheets/popup.css')
-  link(rel='stylesheet', href='/stylesheets/'+theme)
+  link(rel='stylesheet', href='/stylesheets/theme1.css')
   // bandeau de titre
-
-
   .title
     h1= title
 
-  table#theme
-    td#theme1
-    td#theme2
-    td#theme3
-
-
-  //- a#popup(href="#popup1")
-
-
+  a#popup(href="#popup1")
 
   // ajout d'image, tips, autres
   .container
@@ -29,8 +19,7 @@ block content
         img#imgLoad(src='' alt='')
         input#imgupload(type='file' name='file' style='display:none')
 
-      //- img#python(src="../images/bouclier2.png")
-      #python Let's Go !!
+      button#python Find !
 
       div
       .tips
@@ -43,10 +32,8 @@ block content
           li Don&apos;t tilt your head up/down or left/right
 
 
-
-
     div.car
-      - var names = ["anne hathaway", 'dwayne johnson', 'jerry seinfeld', "madonna", 'sofia vergara', "arnold schwarzenegger", 'eddie Hall', "kate beckinsale", 'mindy kaling', 'Travis Fimmel', 'ben afflek', 'elton john' , 'keanu reeves' ,"ragnar", "trump", 'brian Shaw', 'hafthor julius bjornsson', 'lauren cohan', 'simon pegg', "will smith"];
+      - var names = ["anne_hathaway", 'dwayne johnson', 'jerry seinfeld', "madonna", 'sofia vergara', "arnold_schwarzenegger", 'eddie Hall', "kate_beckinsale", 'mindy kaling', 'Travis Fimmel', 'ben afflek', 'elton john' , 'keanu reeves' ,"ragnar", "trump", 'brian Shaw', 'hafthor julius bjornsson', 'lauren cohan', 'simon pegg', "will_smith"];
       ul#c
         each val in names
           li#cli
@@ -64,7 +51,13 @@ block content
         .content
           img#imgLoad(src='' alt='')
 
+  .button
+            button#theme1(onclick="window.location.href='/'") Net
+            button#theme2(onclick="window.location.href='/theme2'") Gay
+            button#theme3(onclick="window.location.href='/theme3'") Medieval
 
+  script(src="../javascripts/lzma.js")
+  script(language="javascript" src="../javascripts/lz-string.js")
   script(language="javascript" src="../javascripts/NNBack.js")
   script(src='../javascripts/main.js' type='text/javascript')
   script(src='../javascripts/python.js' type='text/javascript')
