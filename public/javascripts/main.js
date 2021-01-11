@@ -189,15 +189,13 @@ $('document').ready(function () {
 	});
 
 	if ($("#theme1.css").length) {
+		alert("theme1.css");
 		themeChanger();
 	}
 	
-	// if ($("#theme1.css").length) {
-
-	// }
 	
 	if ($("#theme3.css").length) {
-		this.setAttribute('src', '../images/bouclierSombre2.png');
+		$("#python").setAttribute('src', '../images/bouclierSombre2.png');
 		$('#python').mouseover(function(){
 			this.setAttribute('src', '../images/bouclierSombre2.png');
 		});
