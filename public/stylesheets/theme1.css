@@ -29,13 +29,14 @@ body {
 
 
 .title {
-  background-color:  rgb(26, 25, 25)#383737;
+  background-color:  #d4d3d0;
   width: auto;
   height: 4vw;
   text-align: center;
   opacity: 60%;
   top: 0px;
   margin: 0;
+  margin-top: 0%;
   font-size: 1.5vw
 }
 
@@ -47,6 +48,36 @@ body {
   height: 2vw;
   width: 6vw;
   text-align: center;
+  cursor:pointer;
+}
+
+#theme {
+  display: inline;
+  /* margin-top: .2vw;
+  margin-bottom: -1vw; */
+}
+
+#theme1 {
+  background-color: grey;
+  margin-left: .5vw;
+  height: .5vw;
+  width: .5vw;
+  cursor:pointer;
+}
+
+#theme2 {
+  background-color: turquoise;
+  margin-left: .5vw;
+  height: .5vw;
+  width: .5vw;
+  cursor:pointer;
+}
+
+#theme3 {
+  background-color: burlywood;
+  margin-left: .5vw;
+  height: .5vw;
+  width: .5vw;
   cursor:pointer;
 }
 

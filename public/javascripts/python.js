@@ -42,7 +42,7 @@ $('document').ready(function () {
     console.log(result);
     $("#popup1 h2").first().text(result);
     $("#python").text("Find !");
-    $('.popup img').first().attr('src',"/compare/img/imgSet/" + result + "/0.jpg");
+    $('.popup img').first().attr('src',"../images/celeb/" + result + "/0.jpg");
     // $("#popup").click();
     window.location.href = "#popup1";
   })

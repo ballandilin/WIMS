@@ -14,8 +14,6 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 
   var img = req.body.img;
-  console.log("img");
-
 
   py(img, res);
   // res.render('index', { title: 'WIMS'});

@@ -40,6 +40,20 @@ $('document').ready(function () {
 			}, timer);
 	};
 
+	$('#theme1').click(function(){
+		console.log("click");
+		window.location.href = "./theme1.css";
+	});
+	
+	$('#theme2').click(function(){
+		console.log("click");
+		window.location.href = "./theme2.css";
+	});
+
+	$('#theme3').click(function(){
+		console.log("click");
+		window.location.href = "./theme3.css";
+	});
 
 	// function themeChanger() {
 
