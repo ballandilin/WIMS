@@ -24,6 +24,7 @@ $('document').ready(function () {
           contentType: 'application/json',
           data: JSON.stringify(data),
           success: function(r) {
+            console.log("fonctionne");
             console.log(r);
           },
           statusCode: {
