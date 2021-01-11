@@ -3,15 +3,22 @@ extends layout
 block content
 
   link(rel='stylesheet', href='/stylesheets/popup.css')
-  link(rel='stylesheet', href='/stylesheets/theme1.css')
+  link(rel='stylesheet', href='/stylesheets/'+theme)
   // bandeau de titre
 
-  div(id=theme)
 
   .title
     h1= title
 
-  a#popup(href="#popup1")
+  table#theme
+    td#theme1
+    td#theme2
+    td#theme3
+
+
+  //- a#popup(href="#popup1")
+
+
 
   // ajout d'image, tips, autres
   .container
@@ -36,8 +43,10 @@ block content
           li Don&apos;t tilt your head up/down or left/right
 
 
+
+
     div.car
-      - var names = ["anne_hathaway", 'dwayne johnson', 'jerry seinfeld', "madonna", 'sofia vergara', "arnold_schwarzenegger", 'eddie Hall', "kate_beckinsale", 'mindy kaling', 'Travis Fimmel', 'ben afflek', 'elton john' , 'keanu reeves' ,"ragnar", "trump", 'brian Shaw', 'hafthor julius bjornsson', 'lauren cohan', 'simon pegg', "will_smith"];
+      - var names = ["anne hathaway", 'dwayne johnson', 'jerry seinfeld', "madonna", 'sofia vergara', "arnold schwarzenegger", 'eddie Hall', "kate beckinsale", 'mindy kaling', 'Travis Fimmel', 'ben afflek', 'elton john' , 'keanu reeves' ,"ragnar", "trump", 'brian Shaw', 'hafthor julius bjornsson', 'lauren cohan', 'simon pegg', "will smith"];
       ul#c
         each val in names
           li#cli
@@ -54,11 +63,6 @@ block content
         a.close(href='#') &times;
         .content
           img#imgLoad(src='' alt='')
-
-  .button
-            button#theme1(onclick="window.location.href='/'") Net
-            button#theme2(onclick="window.location.href='/theme2'") Gay
-            button#theme3(onclick="window.location.href='/theme3'") Medieval
 
 
   //- script(type="module" src="../javascripts/NNBack.js")
