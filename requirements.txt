@@ -1,3 +1,6 @@
-dlib==19.21.0
 numpy==1.19.2
-Pillow==8.0.1
+pypugjs==5.9.8
+Flask==1.1.2
+Flask_SocketIO==5.0.1
+dlib==19.21.0
+Pillow==8.1.0
