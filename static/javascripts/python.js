@@ -17,16 +17,16 @@ $('document').ready(function () {
           contentType: 'application/json',
           data: JSON.stringify(data),
           success: function(r) {
-            $("#python").text("fonctionne");
+            console.log(r);
           },
           statusCode: {
             500: function() {
               alert("Une erreur est survenue dans le processus");
-              $("#python").text("Find !");
+              $("#python").text("Retry !");
             },
             404: function() {
               alert("Une erreur est survenue dans le processus");
-              $("#python").text("Find !");
+              $("#python").text("Retry !");
             }
           }
       });
@@ -35,8 +35,7 @@ $('document').ready(function () {
   });
 
   soc.on('result', function(result) {
-    // $("#result").text(result);
-    console.log(result);
+
     $("#popup1 h2").first().text(result);
     $("#python").text("Find !");
     $('.popup img').first().attr('src',"/static/celeb/" + result + "/0.jpg");
