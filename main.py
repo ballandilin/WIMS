@@ -9,6 +9,7 @@ from threading import Thread
 import time
 import base64
 from io import BytesIO
+import re
 # from bdConnection import MongoConnect
 
 
@@ -62,7 +63,7 @@ class App():
 
 		str.encode(save)
 
-		im = PIL.Image.open(BytesIO(base64.b64decode(save)))
+		im = PIL.Image.open(BytesIO(base64.b64decode(save, '-_')))
 		im.save('./static/out.jpg', 'JPEG')
 
 
