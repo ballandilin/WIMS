@@ -19,7 +19,7 @@ def index():
 @app.route('/', methods=['GET','POST'])
 def test():
    temp = None
-   # app = find.App(img1, "../img/imgComp/0.jpg")
+
    if request.method == 'POST':
       temp=request.json['img']
       app = find.App(img1, temp)
