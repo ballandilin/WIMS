@@ -1,2 +1,2 @@
 pipinstall: pip install -r requirements.txt
-web: gunicorn index:app
+web: gunicorn --worker-class eventlet -w 1 index:app
