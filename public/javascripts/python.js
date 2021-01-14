@@ -3,12 +3,15 @@ $('document').ready(function () {
     var soc = io();
 
 
+
   $('#python').click(function(){
+
     var img = $('#imgLoad').attr('src');
     var data = { img : img };
     if (img === '' ) {
       alert("Une image est necessaire");
     } else {
+      console.log(data);
       $("#python").text("waiting...");
       $.ajax({
           type: "POST",

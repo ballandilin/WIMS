@@ -9,6 +9,7 @@ from threading import Thread
 import time
 import base64
 from io import BytesIO
+import cv2
 
 
 
@@ -54,9 +55,6 @@ class App():
 		pass
 
 
-
-
-
 	def _save(self, dico):
 		"""
 
@@ -64,11 +62,11 @@ class App():
 
 		Summary: save 128d vector for each picture in a json file
 
-		Examples: InsertHere
+		Examples: 
 
 		Attributes: 
 
-			@param (self):InsertHere
+			@param (self):
 
 			@param (dico):InsertHere
 
@@ -347,15 +345,22 @@ if __name__ == "__main__":
 	# img2 = "\\img\\imgComp\\3.jpg"
 	start_time = time.time()
 
-	# img2 = sys.argv[1][23::]
-	# img2 = sys.stdin[1][23::]
 	for lines in sys.stdin:
-		img2 = lines[23::]
+		data = lines
+
+	if ("png" in data):
+		img2 = data[22::]
+	else:
+		img2 = data[23::]
+
 
 	str.encode(img2)
+	imgData = base64.b64decode(img2)
 
-	im = PIL.Image.open(BytesIO(base64.b64decode(img2)))
-	im.save('./public/compare/out.jpg', 'JPEG')
+	image = PIL.Image.open(BytesIO(imgData))
+
+	img = cv2.cvtColor(np.array(image), cv2.COLOR_BGR2RGB)
+	cv2.imwrite('./public/compare/out.jpg', img)
 
 	# time.sleep(1)
 

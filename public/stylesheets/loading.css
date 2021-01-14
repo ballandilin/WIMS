@@ -1,0 +1,88 @@
+/* @charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: #011627;
+  font-family: "Nunito", sans-serif;
+} */
+
+/* .cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+} */
+/* .container h1 {
+  color: #2EC4B6;
+} */
+
+#python {
+  background: #2EC4B6;
+  width: 200px;
+  padding: 15px;
+  color: #F4F4F4;
+  border-radius: 3em;
+  box-shadow: 1px 1px 17px #020a09;
+  cursor: pointer;
+  text-align: center;
+  margin: 2em auto;
+  transition: all 500ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+
+.btn__progress {
+  padding: 5px;
+  width: 500px;
+  color: transparent;
+}
+.btn__progress--fill:after {
+  content: "";
+  margin: -25.9px -5px;
+  position: absolute;
+  display: block;
+  background: #249b90;
+  padding: 0.98em;
+  border-radius: 3em;
+  -webkit-animation: fill 3.4s linear forwards;
+          animation: fill 3.4s linear forwards;
+}
+.btn__complete {
+  padding: 10px;
+  width: 42px;
+  color: transparent;
+  pointer-events: none;
+}
+.btn__complete:after {
+  font-family: FontAwesome;
+  content: "";
+  color: #F4F4F4;
+  margin: -18px 3px;
+  position: absolute;
+  display: block;
+}
+
+@-webkit-keyframes fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10vw;
+  }
+}
+
+@keyframes fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10vw;
+  }
+}

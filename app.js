@@ -10,6 +10,8 @@ const bodyParser = require('body-parser');
 
 
 var indexRouter = require('./routes/index');
+var index2Router = require('./routes/index2');
+var index3Router = require('./routes/index3');
 var usersRouter = require('./routes/users');
 var pythonRouter = require('./routes/pythonData');
 
@@ -41,6 +43,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/index2', index2Router);
+app.use('/index3', index3Router);
 app.use('/users', usersRouter);
 app.use('/pythonData', pythonRouter);
 
