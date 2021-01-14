@@ -1,5 +1,9 @@
 $('document').ready(function () {
 
+
+	/**
+	 * function pour gerer le carrousel d'image
+	 */
 	function displayList() {
 		var timer = 4000;
 
@@ -37,8 +41,9 @@ $('document').ready(function () {
 			}, timer);
 	};
 
-	// $("#python").attr('src', '../images/bouclierSombre2.png');
-
+	/**
+	 * function permettant de gerer les themes du site
+	 */
 	$('#theme1').click(function(){
 		window.location.href = "./";
 	});
@@ -51,25 +56,6 @@ $('document').ready(function () {
 		window.location.href = "./index3";
 	});
 
-	if ($("#theme1.css").length) {
-		alert("theme1.css");
-		themeChanger();
-	}
-	
-	
-	if ($("#theme3.css").length) {
-		$("#python").attr('src', '../images/bouclierSombre2.png');
-		$('#python').mouseover(function(){
-			this.attr('src', '../images/bouclierSombre2.png');
-		});
-
-		$('#python').mouseleave(function(){
-			this.attr('src', '../images/bouclier2.png');
-		});
-	}
-
-
-	// themeChanger();
 	displayList();
 
 });

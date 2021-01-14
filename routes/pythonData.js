@@ -3,7 +3,7 @@ var router = express.Router();
 
 
 
-/* GET home page. */
+/* GET python page */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'WIMS'});
 });
@@ -16,16 +16,18 @@ router.post('/', function(req, res, next) {
   var img = req.body.img;
 
   py(img, res);
-  // res.render('index', { title: 'WIMS'});
 
   res.send(req.session)
-  // res.render('login', { title: 'sketchy' });
 });
 
 
 module.exports = router;
 
-
+/**
+ * Function permettant de gerer le fonctionnement du programme python, l'envoie de l'image et la reception des resultat
+ * @param {*} img 
+ * @param {*} res 
+ */
 function py(img, res) {
 
   let {PythonShell} = require('python-shell')
@@ -35,28 +37,25 @@ function py(img, res) {
     scriptPath: 'public/compare'
 };
 
+  // on commence une nouvelle instance de PythonShell
   myscript = new PythonShell('main.py', options);
   myscript.send(img);
   var results = [];
 
+  // on recupere chaque message renvoyé par le programme python via un print
   myscript.on('message', function(message) {
-    console.log(message);
     results.push(message);
   });
 
 
   myscript.end(function(err, code, signal) {    
     if (err) {
-      // errorHandler(res);
       console.log(err);
+      // si il n'y as aucun resultat on renvoie aucun visage
       results.push("face not found");
-      // throw err
     };
     console.log(results);
     res.io.emit("result", results[0]);            
   });
-
-
-
 
 }

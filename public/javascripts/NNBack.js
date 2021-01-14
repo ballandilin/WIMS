@@ -1,10 +1,13 @@
 function Particle(o) {
 
+    // on creer un element canvas afin de l'ajouter dans le fichier pug
     this.C = document.createElement('canvas');
     document.body.appendChild(this.C);
 
+    // si le paramtres "o" n'est pas definie on le definit sinon on laisse la valeur de base
     o = o !== undefined ? o : {};
 
+    // on remplit le parametres "o" de parametres pour configurer son utilisation
     this.o = {
         w: (o.w !== undefined) ? o.w : window.innerWidth,
         h: (o.h !== undefined) ? o.h : window.innerHeight,
@@ -23,6 +26,7 @@ function Particle(o) {
     this._i();
 }
 
+// On modifie la class Particle
 Particle.prototype._i = function () {
     if ((/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i).test(this.o.b)) {
         this.C.parentElement.style.background = "#242729";
@@ -133,6 +137,7 @@ P.prototype._d = function () {
     this.$.fill();
 };
 
+// on initialise un objet Particle
 new Particle({
     w: window.innerWidth,
     h: window.innerHeight,

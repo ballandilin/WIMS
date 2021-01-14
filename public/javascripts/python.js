@@ -2,17 +2,19 @@ $('document').ready(function () {
 
     var soc = io();
 
-
-
   $('#python').click(function(){
 
+    // on recupere la source de l'image
     var img = $('#imgLoad').attr('src');
+    // on formate les données sous forme de dictionnaire
     var data = { img : img };
+
+    // Si l'image est vide alors on le montre a l'utilisateur
     if (img === '' ) {
       alert("Une image est necessaire");
     } else {
-      console.log(data);
       $("#python").text("waiting...");
+      // On creer la requete a envoyer au programme python
       $.ajax({
           type: "POST",
           url: "/pythonData/",
@@ -34,6 +36,7 @@ $('document').ready(function () {
 
   });
 
+  // on utilise les websocket pour recuperer le moment ou un resultat est renvoyer
   soc.on('result', function(result) {
     // $("#result").text(result);
     console.log(result);

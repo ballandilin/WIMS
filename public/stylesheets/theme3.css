@@ -119,12 +119,15 @@ body {
   grid-area: three;
   /*position: relative;*/
   margin: auto 0;
+  border-radius: 1vw;
+  background-color: rgb(173, 121, 52);
 }
 
 .tips h3 {
   position: relative;
   text-align: left;
-  font-size: 1.3vw; 
+  font-size: 1.3vw;
+  color: rgb(255, 255, 255);
 }
 
 .tips li
@@ -134,10 +137,16 @@ body {
   position: relative;
   font-size: 0.9vw;
   width: auto;
-  color: black;
+  color: rgb(255, 255, 255);
   opacity: 1;
   margin : auto 0;
 }
+
+.tips a
+{
+color: rgb(255, 255, 255);
+}
+
 
 
 
