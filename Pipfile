@@ -12,6 +12,7 @@ flask-socketio = "*"
 numpy = "*"
 pillow = "*"
 eventlet = "*"
+pymongo = "*"
 
 [dev-packages]
 
