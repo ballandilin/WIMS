@@ -14,6 +14,7 @@ pillow = "*"
 eventlet = "*"
 pymongo = "*"
 opencv-contrib-python = "*"
+opencv-python = "*"
 
 [dev-packages]
 
