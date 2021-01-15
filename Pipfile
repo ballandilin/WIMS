@@ -13,6 +13,7 @@ numpy = "*"
 pillow = "*"
 eventlet = "*"
 pymongo = "*"
+opencv-contrib-python = "*"
 
 [dev-packages]
 
