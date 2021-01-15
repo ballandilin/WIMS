@@ -15,6 +15,8 @@ eventlet = "*"
 pymongo = "*"
 opencv-contrib-python = "*"
 opencv-python = "*"
+sklearn = "*"
+scikit-learn = "*"
 
 [dev-packages]
 
