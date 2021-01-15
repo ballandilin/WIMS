@@ -10,7 +10,7 @@ import time
 import base64
 from io import BytesIO
 from package import bdConnection
-import cv2
+# import cv2
 
 
 
@@ -111,7 +111,7 @@ class App():
 		image = PIL.Image.open(BytesIO(imgData))
 
 		img = cv2.cvtColor(np.array(image), cv2.COLOR_BGR2RGB)
-		cv2.imwrite('./static/out.jpg', img)
+		PIL.save('./static/out.jpg', 'JPEG')
 		path = './static/out.jpg'
 		return path
 
