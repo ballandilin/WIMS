@@ -17,6 +17,7 @@ opencv-contrib-python = "*"
 opencv-python = "*"
 sklearn = "*"
 scikit-learn = "*"
+scikit-build = "*"
 
 [dev-packages]
 
