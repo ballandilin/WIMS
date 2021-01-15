@@ -12,7 +12,7 @@ canvas {
 
 
 body {
-  background-image: url("../images/back.png");
+  background-image: url("../back.png");
   background-color: #242729;
   background-repeat: no-repeat;
   background-position: center;
@@ -42,13 +42,16 @@ body {
 
 #python {
   grid-area: two;
-  border: 1px solid #04dbd4;
+  /* border: 1px solid #04dbd4;
   border-radius: 10%;
   margin: auto auto;
   height: 2vw;
   width: 6vw;
-  text-align: center;
   cursor:pointer;
+  color: #ffffff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #theme {
@@ -81,10 +84,10 @@ body {
   cursor:pointer;
 }
 
-
+/* 
 #python::after {
   animation: pulsing 1s;
-}
+} */
 
 
 /* #btImage {
@@ -199,6 +202,10 @@ body {
   color: #ffffff;
   opacity: 1;
   margin : auto 0;
+}
+
+.tips a {
+  color: #ffffff;
 }
 
 

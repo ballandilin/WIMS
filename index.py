@@ -16,20 +16,25 @@ img1 = "../img/imgSet/"
 def index():
    return render_template('index.html', title="WIMS")
 
+@app.route('/<theme>')
+def theme1(theme):
+   page = theme
+   return render_template(page, title="WIMS")
+
 @app.route('/', methods=['GET','POST'])
-def test():
+def face():
    temp = None
 
    if request.method == 'POST':
       temp=request.json['img']
       app = find.App(img1, temp)
       name = app.begin()
-      print(name)
+      # print(name)
       socketio.emit('result', name, namespace='/')
 
-   return render_template('index.html', title=name)
+   return render_template('index.html', title="WIMS")
 
 
 if __name__ == '__main__':
-   app.run()
+   app.run(debug=True)
    # socketio.run(app)
